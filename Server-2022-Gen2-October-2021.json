@@ -3,19 +3,22 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "usgovvirginia"
         },
         "networkInterfaceName": {
             "type": "string"
         },
         "enableAcceleratedNetworking": {
-            "type": "bool"
+            "type": "bool",
+            "defaultValue": true
         },
         "subnetName": {
             "type": "string"
         },
         "virtualNetworkId": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/M365-Demo/providers/Microsoft.Network/virtualNetworks/M365-vNet"
         },
         "virtualMachineName": {
             "type": "string"
@@ -24,25 +27,31 @@
             "type": "string"
         },
         "virtualMachineRG": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "M365-Demo"
         },
         "osDiskType": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Premium_LRS"
         },
         "virtualMachineSize": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Standard_D4s_v3"
         },
         "adminUsername": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "SVR_ADM"
         },
         "adminPassword": {
             "type": "secureString"
         },
         "diagnosticsStorageAccountName": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "storacct"
         },
         "diagnosticsStorageAccountId": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Storage/storageAccounts/storacct"
         }
     },
     "variables": {
