@@ -124,6 +124,11 @@
                     }
                 },
                 "licenseType": "Windows_Server",
+                "priority": "Spot",
+                "evictionPolicy": "Deallocate",
+                "billingProfile": {
+                    "maxPrice": -1
+                },
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
                         "enabled": true
