@@ -124,7 +124,7 @@
                     }
                 },
                 "licenseType": "Windows_Server",
-                "priority": "Spot",
+                "priority": "[parameters('Spot')]",
                 "evictionPolicy": "Deallocate",
                 "billingProfile": {
                     "maxPrice": -1
