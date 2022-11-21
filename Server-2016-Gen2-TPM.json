@@ -52,6 +52,18 @@
         "diagnosticsStorageAccountId": {
             "type": "string",
             "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Storage/storageAccounts/storacct"
+        },
+        "securityType": {
+            "type": "string",
+            "defaultValue": "TrustedLaunch"
+        },
+        "secureBoot": {
+            "type": "bool",
+            "defaultValue": true
+        },
+        "vTPM": {
+            "type": "bool",
+            "defaultValue": true
         }
     },
     "variables": {
@@ -128,6 +140,13 @@
                 "evictionPolicy": "Deallocate",
                 "billingProfile": {
                     "maxPrice": -1
+                },
+                "securityProfile": {
+                    "securityType": "[parameters('securityType')]",
+                    "uefiSettings": {
+                        "secureBootEnabled": "[parameters('secureBoot')]",
+                        "vTpmEnabled": "[parameters('vTPM')]"
+                    }
                 },
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
