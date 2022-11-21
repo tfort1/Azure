@@ -65,8 +65,8 @@
             "type": "bool",
             "defaultValue": true
         }
-        },
-        "variables": {
+    },
+    "variables": {
         "vnetId": "[parameters('virtualNetworkId')]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]",
         "diagnosticsExtensionName": "Microsoft.Insights.VMDiagnosticsSettings"
