@@ -36,7 +36,7 @@
         },
         "virtualMachineSize": {
             "type": "string",
-            "defaultValue": "Standard_D4ds_v4"
+            "defaultValue": "Standard_E2ds_v4"
         },
         "adminUsername": {
             "type": "string",
@@ -49,12 +49,24 @@
             "type": "string",
             "defaultValue": "storacct"
         },
-        "diagnosticsStorageAccountId": {
-            "type": "string",
-            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Storage/storageAccounts/storacct"
-        }
-    },
-    "variables": {
+"diagnosticsStorageAccountId": {
+    "type": "string",
+    "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Storage/storageAccounts/storacct"
+}
+"securityType": {
+    "type": "bool",
+    "defaultValue": "TrustedLaunch"
+},
+"secureBoot": {
+    "type": "bool",
+    "defaultValue": true
+},
+"vTPM": {
+    "type": "bool",
+    "defaultValue": true
+}
+},
+"variables": {
         "vnetId": "[parameters('virtualNetworkId')]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]",
         "diagnosticsExtensionName": "Microsoft.Insights.VMDiagnosticsSettings"
