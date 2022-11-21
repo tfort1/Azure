@@ -53,6 +53,18 @@
             "type": "string",
             "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Storage/storageAccounts/storacct"
         }
+        "securityType": {
+            "type": "bool",
+            "defaultValue": "TrustedLaunch"
+        },
+        "secureBoot": {
+            "type": "bool",
+            "defaultValue": true
+        },
+        "vTPM": {
+            "type": "bool",
+            "defaultValue": true
+        }
     },
     "variables": {
         "vnetId": "[parameters('virtualNetworkId')]",
