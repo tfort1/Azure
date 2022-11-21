@@ -141,6 +141,13 @@
                 "billingProfile": {
                     "maxPrice": -1
                 },
+                "securityProfile": {
+                    "securityType": "[parameters('securityType')]",
+                    "uefiSettings": {
+                        "secureBootEnabled": "[parameters('secureBoot')]",
+                        "vTpmEnabled": "[parameters('vTPM')]"
+                    }
+                },
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
                         "enabled": true
