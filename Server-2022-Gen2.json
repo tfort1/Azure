@@ -54,7 +54,7 @@
             "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Storage/storageAccounts/storacct"
         },
         "securityType": {
-            "type": "bool",
+            "type": "string",
             "defaultValue": "TrustedLaunch"
         },
         "secureBoot": {
