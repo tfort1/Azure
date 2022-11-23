@@ -135,7 +135,7 @@
                         "provisionVmAgent": true
                     }
                 },
-                "licenseType": "Windows_Client",
+                "licenseType": "Windows_Server",
                 "priority": "Spot",
                 "evictionPolicy": "Deallocate",
                 "billingProfile": {
