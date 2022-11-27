@@ -103,7 +103,7 @@
                     "imageReference": {
                         "publisher": "MicrosoftWindowsServer",
                         "offer": "WindowsServer",
-                        "sku": "2016-datacenter-gensecond",
+                        "sku": "2016-datacenter-smalldisk-g2",
                         "version": "latest"
                     }
                 },
