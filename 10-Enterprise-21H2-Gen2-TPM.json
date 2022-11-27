@@ -115,7 +115,7 @@
                     "imageReference": {
                         "publisher": "MicrosoftWindowsDesktop",
                         "offer": "Windows-10",
-                        "sku": "win10-21h2-ent-g2",
+                        "sku": "win10-22h2-ent-g2",
                         "version": "latest"
                     }
                 },
