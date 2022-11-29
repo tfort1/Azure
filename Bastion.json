@@ -4,51 +4,51 @@
     "parameters": {
         "location": {
             "type": "string",
-            "value": "usgovvirginia"
+            "defaultValue": "usgovvirginia"
         },
         "resourceGroup": {
             "type": "string",
-            "value": "Misc"
+            "defaultValue": "Misc"
         },
         "bastionHostName": {
             "type": "string",
-            "value": "Bastion"
+            "defaultValue": "Bastion"
         },
         "subnetId": {
             "type": "string",
-            "value": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/M365-Demo/providers/Microsoft.Network/virtualNetworks/M365-vNet/subnets/AzureBastionSubnet"
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/M365-Demo/providers/Microsoft.Network/virtualNetworks/M365-vNet/subnets/AzureBastionSubnet"
         },
         "bastionHostSku": {
             "type": "string",
-            "value": "Standard"
+            "defaultValue": "Standard"
         },
         "bastionHostScaleUnits": {
             "type": "int",
-            "value": 2
+            "defaultValue": 2
         },
         "enableIpConnect": {
             "type": "bool",
-            "value": true
+            "defaultValue": true
         },
         "enableTunneling": {
             "type": "bool",
-            "value": true
+            "defaultValue": true
         },
         "enableShareableLink": {
             "type": "bool",
-            "value": false
+            "defaultValue": false
         },
         "enableKerberos": {
             "type": "bool",
-            "value": false
+            "defaultValue": false
         },
         "disableCopyPaste": {
             "type": "bool",
-            "value": false
+            "defaultValue": false
         },
         "publicIpAddressId": {
             "type": "string",
-            "value": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Network/publicIPAddresses/Bastion-pip"
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Network/publicIPAddresses/Bastion-pip"
         }
     },
     "resources": [
