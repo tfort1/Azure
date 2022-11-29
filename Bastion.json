@@ -1,0 +1,88 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "type": "string",
+            "value": "usgovvirginia"
+        },
+        "resourceGroup": {
+            "type": "string",
+            "value": "Misc"
+        },
+        "bastionHostName": {
+            "type": "string",
+            "value": "Bastion"
+        },
+        "subnetId": {
+            "type": "string",
+            "value": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/M365-Demo/providers/Microsoft.Network/virtualNetworks/M365-vNet/subnets/AzureBastionSubnet"
+        },
+        "bastionHostSku": {
+            "type": "string",
+            "value": "Standard"
+        },
+        "bastionHostScaleUnits": {
+            "type": "int",
+            "value": 2
+        },
+        "enableIpConnect": {
+            "type": "bool",
+            "value": true
+        },
+        "enableTunneling": {
+            "type": "bool",
+            "value": true
+        },
+        "enableShareableLink": {
+            "type": "bool",
+            "value": false
+        },
+        "enableKerberos": {
+            "type": "bool",
+            "value": false
+        },
+        "disableCopyPaste": {
+            "type": "bool",
+            "value": false
+        },
+        "publicIpAddressId": {
+            "type": "string",
+            "value": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Network/publicIPAddresses/Bastion-pip"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2020-11-01",
+            "type": "Microsoft.Network/bastionHosts",
+            "name": "[parameters('bastionHostName')]",
+            "sku": {
+                "name": "[parameters('bastionHostSku')]"
+            },
+            "location": "[parameters('location')]",
+            "dependsOn": [],
+            "properties": {
+                "enableIpConnect": "[parameters('enableIpConnect')]",
+                "enableTunneling": "[parameters('enableTunneling')]",
+                "enableShareableLink": "[parameters('enableShareableLink')]",
+                "enableKerberos": "[parameters('enableKerberos')]",
+                "disableCopyPaste": "[parameters('disableCopyPaste')]",
+                "ipConfigurations": [
+                    {
+                        "name": "IpConf",
+                        "properties": {
+                            "subnet": {
+                                "id": "[parameters('subnetId')]"
+                            },
+                            "publicIPAddress": {
+                                "id": "[parameters('publicIpAddressId')]"
+                            }
+                        }
+                    }
+                ],
+                "scaleUnits": "[parameters('bastionHostScaleUnits')]"
+            },
+            "tags": {}
+        }
+    ]
+}
