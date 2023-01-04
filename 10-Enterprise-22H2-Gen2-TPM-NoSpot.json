@@ -113,9 +113,9 @@
                         }
                     },
                     "imageReference": {
-                        "publisher": "MicrosoftWindowsServer",
-                        "offer": "WindowsServer",
-                        "sku": "2022-datacenter-azure-edition",
+                        "publisher": "MicrosoftWindowsDesktop",
+                        "offer": "Windows-10",
+                        "sku": "win10-22h2-ent-g2",
                         "version": "latest"
                     }
                 },
@@ -135,12 +135,7 @@
                         "provisionVmAgent": true
                     }
                 },
-                "licenseType": "Windows_Server",
-                "priority": "Spot",
-                "evictionPolicy": "Deallocate",
-                "billingProfile": {
-                    "maxPrice": -1
-                },
+                "licenseType": "Windows_Client",
                 "securityProfile": {
                     "securityType": "[parameters('securityType')]",
                     "uefiSettings": {

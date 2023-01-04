@@ -52,6 +52,18 @@
         "diagnosticsStorageAccountId": {
             "type": "string",
             "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Storage/storageAccounts/storacct"
+        },
+        "securityType": {
+            "type": "string",
+            "defaultValue": "TrustedLaunch"
+        },
+        "secureBoot": {
+            "type": "bool",
+            "defaultValue": true
+        },
+        "vTPM": {
+            "type": "bool",
+            "defaultValue": true
         }
     },
     "variables": {
@@ -63,7 +75,7 @@
         {
             "name": "[parameters('networkInterfaceName')]",
             "type": "Microsoft.Network/networkInterfaces",
-            "apiVersion": "2021-08-01",
+            "apiVersion": "2018-10-01",
             "location": "[parameters('location')]",
             "dependsOn": [],
             "properties": {
@@ -101,9 +113,9 @@
                         }
                     },
                     "imageReference": {
-                        "publisher": "microsoftwindowsserver",
-                        "offer": "microsoftserveroperatingsystems-previews",
-                        "sku": "windows-server-vnext-azure-edition",
+                        "publisher": "MicrosoftWindowsServer",
+                        "offer": "WindowsServer",
+                        "sku": "2016-datacenter-smalldisk-g2",
                         "version": "latest"
                     }
                 },
@@ -124,21 +136,18 @@
                     }
                 },
                 "licenseType": "Windows_Server",
-                "priority": "Spot",
-                "evictionPolicy": "Deallocate",
-                "billingProfile": {
-                    "maxPrice": -1
+                "securityProfile": {
+                    "securityType": "[parameters('securityType')]",
+                    "uefiSettings": {
+                        "secureBootEnabled": "[parameters('secureBoot')]",
+                        "vTpmEnabled": "[parameters('vTPM')]"
+                    }
                 },
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
                         "enabled": true
                     }
                 }
-            },
-            "plan": {
-                "name": "windows-server-vnext-azure-edition",
-                "publisher": "microsoftwindowsserver",
-                "product": "microsoftserveroperatingsystems-previews"
             }
         },
         {
@@ -424,7 +433,7 @@
                 },
                 "protectedSettings": {
                     "storageAccountName": "[parameters('diagnosticsStorageAccountName')]",
-                    "storageAccountKey": "[first(listKeys(parameters('diagnosticsStorageAccountId'),'2019-06-01').keys).value]",
+                    "storageAccountKey": "[first(listKeys(parameters('diagnosticsStorageAccountId'),'2019-04-01').keys).value]",
                     "storageAccountEndPoint": "https://core.usgovcloudapi.net/"
                 }
             },

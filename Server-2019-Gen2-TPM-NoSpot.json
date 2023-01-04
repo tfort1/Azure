@@ -136,11 +136,6 @@
                     }
                 },
                 "licenseType": "Windows_Server",
-                "priority": "Spot",
-                "evictionPolicy": "Deallocate",
-                "billingProfile": {
-                    "maxPrice": -1
-                },
                 "securityProfile": {
                     "securityType": "[parameters('securityType')]",
                     "uefiSettings": {
