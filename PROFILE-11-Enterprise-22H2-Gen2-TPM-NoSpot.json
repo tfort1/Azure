@@ -32,7 +32,7 @@
         },
         "osDiskType": {
             "type": "string",
-            "defaultValue": "Premium_LRS"
+            "defaultValue": "StandardSSD_LRS"
         },
         "virtualMachineSize": {
             "type": "string",
