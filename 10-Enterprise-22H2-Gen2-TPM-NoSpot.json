@@ -64,6 +64,13 @@
         "vTPM": {
             "type": "bool",
             "defaultValue": true
+        },
+        "osDiskName": {
+            "type": "string"
+        },
+        "timeZone": {
+            "type": "string",
+            "defaultValue": "Central Standard Time"
         }
     },
     "variables": {

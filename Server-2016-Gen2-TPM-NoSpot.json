@@ -64,6 +64,13 @@
         "vTPM": {
             "type": "bool",
             "defaultValue": true
+        },
+        "osDiskName": {
+            "type": "string"
+        },
+        "timeZone": {
+            "type": "string",
+            "defaultValue": "Central Standard Time"
         }
     },
     "variables": {
@@ -116,7 +123,7 @@
                     "imageReference": {
                         "publisher": "MicrosoftWindowsServer",
                         "offer": "WindowsServer",
-                        "sku": "2016-datacenter-smalldisk-g2",
+                        "sku": "2016-datacenter-gensecond",
                         "version": "latest"
                     }
                 },
