@@ -18,7 +18,7 @@
         },
         "virtualNetworkId": {
             "type": "string",
-            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/M365-Demo/providers/Microsoft.Network/virtualNetworks/M365-vNet"
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-VA-RG/providers/Microsoft.Network/virtualNetworks/M365-vNet"
         },
         "virtualMachineName": {
             "type": "string"
