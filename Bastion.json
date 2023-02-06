@@ -8,7 +8,7 @@
         },
         "resourceGroup": {
             "type": "string",
-            "defaultValue": "Misc"
+            "defaultValue": "Misc-VA-RG"
         },
         "bastionHostName": {
             "type": "string",
@@ -16,7 +16,7 @@
         },
         "subnetId": {
             "type": "string",
-            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/M365-Demo/providers/Microsoft.Network/virtualNetworks/M365-vNet/subnets/AzureBastionSubnet"
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-VA-RG/providers/Microsoft.Network/virtualNetworks/M365-vNet/subnets/AzureBastionSubnet"
         },
         "bastionHostSku": {
             "type": "string",
@@ -48,7 +48,7 @@
         },
         "publicIpAddressId": {
             "type": "string",
-            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc/providers/Microsoft.Network/publicIPAddresses/Bastion-pip"
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-VA-RG/providers/Microsoft.Network/publicIPAddresses/Bastion-pip"
         }
     },
     "resources": [
