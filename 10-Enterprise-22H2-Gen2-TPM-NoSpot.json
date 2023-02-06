@@ -28,7 +28,7 @@
         },
         "virtualMachineRG": {
             "type": "string",
-            "defaultValue": "M365-Demo"
+            "defaultValue": "M365-VA-RG"
         },
         "osDiskType": {
             "type": "string",
