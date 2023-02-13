@@ -4,7 +4,7 @@
     "parameters": {
         "location": {
             "type": "string",
-            "defaultValue": "usgovvirginia"
+            "defaultValue": "usgovtexas"
         },
         "networkInterfaceName": {
             "type": "string"
@@ -18,7 +18,7 @@
         },
         "virtualNetworkId": {
             "type": "string",
-            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-VA-RG/providers/Microsoft.Network/virtualNetworks/M365-vNet"
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-TX-RG/providers/Microsoft.Network/virtualNetworks/TX-vNet"
         },
         "virtualMachineName": {
             "type": "string"
@@ -28,7 +28,7 @@
         },
         "virtualMachineRG": {
             "type": "string",
-            "defaultValue": "M365-VA-RG"
+            "defaultValue": "Misc-TX-RG"
         },
         "osDiskType": {
             "type": "string",
@@ -51,7 +51,7 @@
         },
         "diagnosticsStorageAccountId": {
             "type": "string",
-            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-VA-RG/providers/Microsoft.Storage/storageAccounts/storacct"
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-TX-RG/providers/Microsoft.Storage/storageAccounts/storacct"
         },
         "securityType": {
             "type": "string",
