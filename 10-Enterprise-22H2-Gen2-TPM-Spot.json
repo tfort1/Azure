@@ -3,8 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "string",
-            "defaultValue": "usgovtexas"
+            "type": "string"
         },
         "networkInterfaceName": {
             "type": "string"
@@ -17,8 +16,7 @@
             "type": "string"
         },
         "virtualNetworkId": {
-            "type": "string",
-            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-TX-RG/providers/Microsoft.Network/virtualNetworks/TX-vNet"
+            "type": "string"
         },
         "virtualMachineName": {
             "type": "string"
@@ -27,27 +25,22 @@
             "type": "string"
         },
         "virtualMachineRG": {
-            "type": "string",
-            "defaultValue": "Misc-TX-RG"
+            "type": "string"
         },
         "osDiskType": {
-            "type": "string",
-            "defaultValue": "StandardSSD_LRS"
+            "type": "string"
         },
         "virtualMachineSize": {
-            "type": "string",
-            "defaultValue": "Standard_E2ds_v5"
+            "type": "string"
         },
         "adminUsername": {
-            "type": "string",
-            "defaultValue": "SVR_ADM"
+            "type": "string"
         },
         "adminPassword": {
             "type": "secureString"
         },
         "securityType": {
-            "type": "string",
-            "defaultValue": "TrustedLaunch"
+            "type": "string"
         },
         "secureBoot": {
             "type": "bool",
@@ -61,8 +54,7 @@
             "type": "string"
         },
         "timeZone": {
-            "type": "string",
-            "defaultValue": "Central Standard Time"
+            "type": "string"
         }
     },
     "variables": {
