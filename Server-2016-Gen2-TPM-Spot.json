@@ -9,8 +9,7 @@
             "type": "string"
         },
         "enableAcceleratedNetworking": {
-            "type": "bool",
-            "defaultValue": true
+            "type": "bool"
         },
         "subnetName": {
             "type": "string"
@@ -43,12 +42,10 @@
             "type": "string"
         },
         "secureBoot": {
-            "type": "bool",
-            "defaultValue": true
+            "type": "bool"
         },
         "vTPM": {
-            "type": "bool",
-            "defaultValue": true
+            "type": "bool"
         },
         "osDiskName": {
             "type": "string"
