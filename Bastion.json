@@ -3,52 +3,40 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "string",
-            "defaultValue": "usgovvirginia"
+            "type": "string"
         },
         "resourceGroup": {
-            "type": "string",
-            "defaultValue": "Misc-VA-RG"
+            "type": "string"
         },
         "bastionHostName": {
-            "type": "string",
-            "defaultValue": "Bastion"
+            "type": "string"
         },
         "subnetId": {
-            "type": "string",
-            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-VA-RG/providers/Microsoft.Network/virtualNetworks/M365-vNet/subnets/AzureBastionSubnet"
+            "type": "string"
         },
         "bastionHostSku": {
-            "type": "string",
-            "defaultValue": "Standard"
+            "type": "string"
         },
         "bastionHostScaleUnits": {
-            "type": "int",
-            "defaultValue": 2
+            "type": "int"
         },
         "enableIpConnect": {
-            "type": "bool",
-            "defaultValue": true
+            "type": "bool"
         },
         "enableTunneling": {
-            "type": "bool",
-            "defaultValue": true
+            "type": "bool"
         },
         "enableShareableLink": {
-            "type": "bool",
-            "defaultValue": false
+            "type": "bool"
         },
         "enableKerberos": {
-            "type": "bool",
-            "defaultValue": false
+            "type": "bool"
         },
         "disableCopyPaste": {
-            "type": "bool",
-            "defaultValue": false
+            "type": "bool"
         },
         "publicIpAddressId": {
-            "type": "string",
-            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-VA-RG/providers/Microsoft.Network/publicIPAddresses/Bastion-pip"
+            "type": "string"
         }
     },
     "resources": [
