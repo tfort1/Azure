@@ -3,40 +3,52 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "usgovtexas"
         },
         "resourceGroup": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Misc-TX-RG"
         },
         "bastionHostName": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Bastion1"
         },
         "subnetId": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-TX-RG/providers/Microsoft.Network/virtualNetworks/TX-vNet/subnets/AzureBastionSubnet"
         },
         "bastionHostSku": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Standard"
         },
         "bastionHostScaleUnits": {
-            "type": "int"
+            "type": "int",
+            "defaultValue": "2"
         },
         "enableIpConnect": {
-            "type": "bool"
+            "type": "bool",
+            "defaultValue": true
         },
         "enableTunneling": {
-            "type": "bool"
+            "type": "bool",
+            "defaultValue": true
         },
         "enableShareableLink": {
-            "type": "bool"
+            "type": "bool",
+            "defaultValue": true
         },
         "enableKerberos": {
-            "type": "bool"
+            "type": "bool",
+            "defaultValue": false
         },
         "disableCopyPaste": {
-            "type": "bool"
+            "type": "bool",
+            "defaultValue": true
         },
         "publicIpAddressId": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "/subscriptions/dc9d4bdd-8dfc-4339-bf54-42acec545c4a/resourceGroups/Misc-TX-RG/providers/Microsoft.Network/publicIPAddresses/Bastion-pip1"
         }
     },
     "resources": [
