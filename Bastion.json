@@ -5,9 +5,6 @@
         "location": {
             "type": "string"
         },
-        "resourceGroup": {
-            "type": "string"
-        },
         "bastionHostName": {
             "type": "string"
         },
