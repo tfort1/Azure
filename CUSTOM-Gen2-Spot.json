@@ -38,15 +38,6 @@
         "adminPassword": {
             "type": "secureString"
         },
-        "securityType": {
-            "type": "string"
-        },
-        "secureBoot": {
-            "type": "bool"
-        },
-        "vTPM": {
-            "type": "bool"
-        },
         "osDiskName": {
             "type": "string"
         },
