@@ -52,6 +52,15 @@
         },
         "timeZone": {
             "type": "string"
+        },
+        "publisher": {
+            "type": "string"
+        },
+        "offer": {
+            "type": "string"
+        },
+        "sku": {
+            "type": "string"
         }
     },
     "variables": {
@@ -102,9 +111,9 @@
                         }
                     },
                     "imageReference": {
-                        "publisher": "MicrosoftWindowsServer",
-                        "offer": "WindowsServer",
-                        "sku": "2022-datacenter-core-g2",
+                        "publisher": "[parameters('publisher')]",
+                        "offer": "[parameters('offer')]",
+                        "sku": "[parameters('sku')]",
                         "version": "latest"
                     }
                 },
