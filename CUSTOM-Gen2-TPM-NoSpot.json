@@ -137,10 +137,12 @@
                     }
                 },
                 "licenseType": "[parameters('licenseType')]",
-                "priority": "Spot",
-                "evictionPolicy": "Deallocate",
-                "billingProfile": {
-                    "maxPrice": -1
+                "securityProfile": {
+                    "securityType": "[parameters('securityType')]",
+                    "uefiSettings": {
+                        "secureBootEnabled": "[parameters('secureBoot')]",
+                        "vTpmEnabled": "[parameters('vTPM')]"
+                    }
                 },
                 "diagnosticsProfile": {
                     "bootDiagnostics": {

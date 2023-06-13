@@ -137,11 +137,6 @@
                     }
                 },
                 "licenseType": "[parameters('licenseType')]",
-                "priority": "Spot",
-                "evictionPolicy": "Deallocate",
-                "billingProfile": {
-                    "maxPrice": -1
-                },
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
                         "enabled": true
