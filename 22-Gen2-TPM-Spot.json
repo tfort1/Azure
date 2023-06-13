@@ -52,7 +52,10 @@
         },
         "timeZone": {
             "type": "string"
-        }
+        },
+        "licenseType": {
+            "type": "string"
+        }       
     },
     "variables": {
         "vnetId": "[parameters('virtualNetworkId')]",
@@ -124,7 +127,7 @@
                         "timeZone": "[parameters('timeZone')]"
                     }
                 },
-                "licenseType": "Windows_Server",
+                "licenseType": "[parameters('licenseType')]",
                 "priority": "Spot",
                 "evictionPolicy": "Deallocate",
                 "billingProfile": {
