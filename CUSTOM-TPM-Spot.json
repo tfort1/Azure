@@ -133,7 +133,8 @@
                     "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
                         "provisionVmAgent": true,
-                        "timeZone": "[parameters('timeZone')]"
+                        "timeZone": "[parameters('timeZone')]",
+                        "enableAutomaticUpdates": false
                     }
                 },
                 "licenseType": "[parameters('licenseType')]",
