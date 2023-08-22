@@ -75,7 +75,7 @@
         {
             "name": "[parameters('networkInterfaceName')]",
             "type": "Microsoft.Network/networkInterfaces",
-            "apiVersion": "2021-08-01",
+            "apiVersion": "2017-06-01",
             "location": "[parameters('location')]",
             "dependsOn": [],
             "properties": {
