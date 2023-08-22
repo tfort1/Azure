@@ -35,7 +35,7 @@ resource networkInterface 'Microsoft.Network/networkInterfaces@2017-06-01' = {
           subnet: {
             id: subnetRef
           }
-          privateIPAllocationMethod: 'Static'
+          privateIPAllocationMethod: 'Dynamic'
         }
       }
     ]
