@@ -7,8 +7,6 @@ param offer string
 param osDiskName string
 param osDiskType string
 param publisher string
-param secureBoot bool
-param securityType string
 param sku string
 param subnetName string
 param timeZone string
@@ -16,7 +14,6 @@ param virtualMachineComputerName string
 param virtualMachineName string
 param virtualMachineSize string
 param virtualNetworkId string
-param vTPM bool
 
 @secure()
 param adminPassword string
