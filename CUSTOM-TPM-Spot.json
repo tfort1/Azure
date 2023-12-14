@@ -162,6 +162,13 @@
         "adminUsername": {
             "type": "string",
             "value": "[parameters('adminUsername')]"
+        },
+        "vmIpAddress": {
+            "type": "object",
+            "value": {
+                "VMName": "[parameters('virtualMachineName')]",
+                "IPAddress": "[reference(concat('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName')), '2017-10-01').ipConfigurations[0].properties.privateIPAddress]"
+            }
         }
     }
 }
