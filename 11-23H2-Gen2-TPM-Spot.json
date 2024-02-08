@@ -17,6 +17,9 @@
         "virtualNetworkId": {
             "type": "string"
         },
+        "publicIpAddressName": {
+            "type": "string"
+        },
         "virtualMachineName": {
             "type": "string"
         },
