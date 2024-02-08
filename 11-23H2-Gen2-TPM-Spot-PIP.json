@@ -15,16 +15,16 @@
             "type": "string"
         },
         "virtualNetworkId": {
-            "value": "string"
+            "type": "string"
         },
         "publicIpAddressName": {
-            "value": "VM-1-ip"
+            "type": "string"
         },
         "publicIpAddressType": {
-            "value": "Static"
+            "type": "string"
         },
         "publicIpAddressSku": {
-            "value": "Standard"
+            "type": "string"
         },
         "virtualMachineName": {
             "type": "string"
