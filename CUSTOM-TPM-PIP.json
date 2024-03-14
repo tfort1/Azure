@@ -65,6 +65,9 @@
         "sku": {
             "type": "string"
         },
+        "image": {
+            "type": "string"
+        },
         "licenseType": {
             "type": "string"
         }       
@@ -137,7 +140,7 @@
                         "publisher": "[parameters('publisher')]",
                         "offer": "[parameters('offer')]",
                         "sku": "[parameters('sku')]",
-                        "version": "latest"
+                        "version": "[parameters('image')]"
                     }
                 },
                 "networkProfile": {
