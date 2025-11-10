@@ -69,11 +69,9 @@
         {
             "name": "[parameters('networkInterfaceName')]",
             "type": "Microsoft.Network/networkInterfaces",
-            "apiVersion": "2022-11-01",
+            "apiVersion": "2017-06-01",
             "location": "[parameters('location')]",
-            "dependsOn": [
-                "[concat('Microsoft.Network/publicIpAddresses/', parameters('publicIpAddressName'))]"
-            ],
+            "dependsOn": [],
             "properties": {
                 "ipConfigurations": [
                     {
@@ -82,26 +80,11 @@
                             "subnet": {
                                 "id": "[variables('subnetRef')]"
                             },
-                            "privateIPAllocationMethod": "Dynamic",
-                            "publicIpAddress": {
-                                "id": "[resourceId(resourceGroup().name, 'Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]"
-                            }
+                            "privateIPAllocationMethod": "Dynamic"
                         }
                     }
                 ],
                 "enableAcceleratedNetworking": "[parameters('enableAcceleratedNetworking')]"
-            }
-        },        
-        {
-            "name": "[parameters('publicIpAddressName')]",
-            "type": "Microsoft.Network/publicIpAddresses",
-            "apiVersion": "2019-02-01",
-            "location": "[parameters('location')]",
-            "properties": {
-                "publicIpAllocationMethod": "Static"
-            },
-            "sku": {
-                "name": "Standard"
             }
         },
         {
@@ -127,7 +110,7 @@
                     "imageReference": {
                         "publisher": "MicrosoftWindowsServer",
                         "offer": "WindowsServer",
-                        "sku": "2025-datacenter-g2",
+                        "sku": "2022-datacenter-azure-edition",
                         "version": "latest"
                     }
                 },
@@ -178,13 +161,9 @@
             "type": "string",
             "value": "[parameters('virtualMachineName')]"
         },
-        "vmPrivateIpAddress": {
+        "vmIpAddress": {
             "type": "string",
             "value": "[reference(concat('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName')), '2017-10-01').ipConfigurations[0].properties.privateIPAddress]"
-        },
-        "vmPublicIpAddress": {
-            "type": "string",
-            "value": "[reference(concat('Microsoft.Network/publicIPAddresses/', parameters('publicIpAddressName')), '2017-10-01').ipAddress]"
         }
     }
 }
